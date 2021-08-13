@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Enviar formulario al pulsar un enlace</title>
+    
+</head>
+
+<body>
+    <Form action = "{% url 'resp' %}" method = "post">
+        {% csrf_token %}
+        <Div>
+          <Label for = "dice"> Lo saludo qué quiere decir? </Label>
+          <Input name = "decir" id = "decir" value = "Hola">
+        </Div>
+        <Div>
+          <Label for = "para"> ¿Quién usted quiere decir que a? </Label>
+          <Input name = "a" value = "mamá">
+        </Div>
+        <Div>
+          <button>Botón enviar mis saludos </button>
+        </Div>
+      </Form>
+</body>
+
+</html>
